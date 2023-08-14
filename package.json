@@ -8,7 +8,7 @@
     "server": "node server.js",
     "start": "nodemon server.js",
     "client": "npm start --prefix ./var/task/client",
-    "dev": "concurrently \"npm run start\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "Techinfo",
