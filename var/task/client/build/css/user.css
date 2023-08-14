@@ -1,0 +1,77 @@
+.dashboard-sidebar  .isactive{
+    background-color: #0d6efd !important;
+}
+
+/* -----ant models-------- */
+:where(.css-dev-only-do-not-override-1jr9qlj).ant-modal .ant-modal-close{
+    top: -11px;
+    right: -11px;
+}
+:where(.css-dev-only-do-not-override-1jr9qlj).ant-modal .ant-modal-close-x{
+    font-size: 26px;
+}
+.name-modal-form{
+    width: 50%;
+}
+.modal-form-container .name-modal-form{
+   width: 100%;
+}
+
+/*---Product work---- */
+.prdr-contain :where(.css-dev-only-do-not-override-1jr9qlj).ant-select .ant-select-arrow {
+    color: rgb(255 255 255);
+}
+
+.myselectnewcontroller :where(.css-dev-only-do-not-override-1jr9qlj).ant-select .ant-select-arrow{
+    color: rgb(0 0 0);
+    font-size: 14px;
+}
+.form-change-bg::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.25);
+    
+}
+
+/* cards */
+.myrelif:last-child hr{
+    display: none;
+}
+
+/*--- orders ---*/
+.card-d-head-none{
+    display: none;
+}
+
+/* --Aorders--- */
+.SelectAdminOption .ant-select-selection-item{
+    font-size: 1.1rem;
+    color:#0d6efd;
+}
+
+/* ------Home page------ */
+.ratio-12x9 {
+    --bs-aspect-ratio: 47.25%;
+}
+
+.ratio-my video{
+
+    width: calc(100% + 0px);
+    height: calc(100vh - 84px);
+    object-fit: fill;
+}
+.catSetiodetails a:hover .card{ 
+    transition:  transform 0.6s linear;
+    transform: scale(1.06);
+    box-shadow: 0px 0px 10px 3px #14131399;
+}
+
+.cntContain{
+    max-width: 1627px;
+}
+.smartWatchContaioner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.smartWatchContaioner .ratio-my{
+    height: calc(100vh - 76px);
+}
