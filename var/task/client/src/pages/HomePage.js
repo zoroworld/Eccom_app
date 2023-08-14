@@ -39,7 +39,7 @@ const HomePage = () => {
       <section className='heroSection'>
          <div className='smartWatchContaioner'>
           <div className="ratio-my">
-             <img src="/images/vip.gif" alt="Computer man" />
+              <div style={{padding: '56.25% 0 0 0', position: 'relative'}}><iframe src="https://player.vimeo.com/video/851998088?autoplay=1&loop=1&autopause=0&muted=1" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen frameBorder={0} style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} /></div>
           </div>
          </div>
       </section>
