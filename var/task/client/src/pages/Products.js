@@ -24,7 +24,7 @@ const Products = () => {
 
      const getAllcatgory = async () => {
       try {
-         const {data} = await axios.get(`${process.env.REACT_APP_API}api/v1/category/get-category`);
+         const {data} = await axios.get(`/api/v1/category/get-category`);
          if(data?.success){
           setCategories(data?.category);
          }
@@ -38,7 +38,7 @@ const Products = () => {
   // get products
   // const getAllProducts = async () => {
   //   try {
-  //     const {data} = await axios.get(`${process.env.REACT_APP_API}api/v1/product/get-product`);
+  //     const {data} = await axios.get(`/api/v1/product/get-product`);
   //     setProducts(data.products);
   //   } catch (error) {
   //     console.log(error);
@@ -50,7 +50,7 @@ const Products = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true)
-      const {data} = await axios.get(`${process.env.REACT_APP_API}api/v1/product/product-list/${page}`);
+      const {data} = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false)
       setProducts(data.products);
     } catch (error) {
@@ -76,7 +76,7 @@ const Products = () => {
   // get filter Product
   const filterProduct = async () => {
     try {
-      const {data} = await axios.post(`${process.env.REACT_APP_API}api/v1/product/product-filters`, {checked, radio});
+      const {data} = await axios.post(`/api/v1/product/product-filters`, {checked, radio});
       setProducts(data?.products)
     } catch (error) {
       console.log(error);
@@ -86,7 +86,7 @@ const Products = () => {
   // getTotal Count 
     const getTotal = async () => {
       try {
-        const {data} = await axios.get(`${process.env.REACT_APP_API}api/v1/product/product-count`);
+        const {data} = await axios.get(`/api/v1/product/product-count`);
         setTotal(data?.total)
       } catch (error) {
          console.log(error);
@@ -98,7 +98,7 @@ const Products = () => {
     const loadMore = async () => {
        try {
          setLoading(true)
-         const {data} = await axios.get(`${process.env.REACT_APP_API}api/v1/product/product-list/${page}`);
+         const {data} = await axios.get(`/api/v1/product/product-list/${page}`);
          setLoading(false)
          setProducts([...products, ...data?.products])
        } catch (error) {
@@ -202,7 +202,7 @@ const Products = () => {
                                       <div className='col-md-3 my-2' key={p._id}>
                                           
                                               <div className="card h-100" >
-                                                  <img src={`${process.env.REACT_APP_API}api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={`about ${p.name}`}/>
+                                                  <img src={`/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={`about ${p.name}`}/>
                                                   <div className="card-body d-flex flex-column justify-content-between">
                                                       <div className='mb-3'>
                                                         <div className="d-flex justify-content-between">
