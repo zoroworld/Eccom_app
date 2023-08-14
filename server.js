@@ -47,7 +47,7 @@ app.use('*', function(req, res){
 
 
 // PORT
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 console.log(PORT);
 
 // run listen
