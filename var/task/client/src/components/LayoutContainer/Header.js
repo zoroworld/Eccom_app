@@ -38,7 +38,7 @@ const Header = () => {
     <>
        <div className='headerWrapper bg-dark'>
          <div className="fluid-container px-3">
-            <nav className="navbar navbar-expand-lg  nav Navbar d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <nav className="mynavbarcont navbar navbar-expand-lg  nav Navbar d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <Link  to="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d-flex align-items-center">
                   <img className="shadow p-2" src="/logo512.png" alt="keep shopping and be happy" height={60} width={60}/>
                   <h4 className='mb-0 font-weight-bold logotag'>eccomerce App</h4>
@@ -67,58 +67,60 @@ const Header = () => {
                         <li><NavLink to="/contact" className="nav-link px-2 text-white">Contact</NavLink></li>
                         
                     </ul>
-                    {/* search bar */}
-                    <Searchinput />
-                    <div className='logRegCart d-flex align-items-center'>
-                      <div className="text-end">
-                          {/*-------to see the value --------- */}
+                    <div className='formDiv'>
+                      {/* search bar */}
+                      <Searchinput />
+                      <div className='logRegCart d-flex align-items-center'>
+                        <div className="text-end mytextlogrecart">
+                            {/*-------to see the value --------- */}
 
-                          {/* <NavLink to="/login" className="btn btn-outline-light me-3 rounded-0">Login</NavLink>
-                          <NavLink to="/register" className="btn btn-outline-light me-3 rounded-0">Register</NavLink> */}
-                          
-                           {
-                             !auth.user ? (
-                              <>
-                                <NavLink to="/login" className="btn btn-outline-light me-3 rounded-0">Login</NavLink>
-                                <NavLink to="/register" className="btn btn-outline-light me-3 rounded-0">Register</NavLink>
-                              </>
-                             ):(
-                               <>
+                            {/* <NavLink to="/login" className="btn btn-outline-light me-3 rounded-0">Login</NavLink>
+                            <NavLink to="/register" className="btn btn-outline-light me-3 rounded-0">Register</NavLink> */}
+                            
+                            {
+                              !auth.user ? (
+                                <>
+                                  <NavLink to="/login" className="btn btn-outline-light me-3 rounded-0">Login</NavLink>
+                                  <NavLink to="/register" className="btn btn-outline-light me-3 rounded-0">Register</NavLink>
+                                </>
+                              ):(
+                                <>
+                                    
+                                    <div className="dropdown logoutprofilework me-3">
                                   
-                                  <div className="dropdown logoutprofilework me-3">
+                                      <span className="dropdown-toggle badge d-flex align-items-center p-1 pe-2  border border-outline-light rounded-pill" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img className="rounded-circle me-1" width={30} height={30} src="https://github.com/mdo.png" alt="profile" />
+                                        <span className='profile-name text-white'>{auth?.user?.name}</span>
                                 
-                                    <span className="dropdown-toggle badge d-flex align-items-center p-1 pe-2  border border-outline-light rounded-pill" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
-                                      <img className="rounded-circle me-1" width={30} height={30} src="https://github.com/mdo.png" alt="profile" />
-                                       <span className='profile-name text-white'>{auth?.user?.name}</span>
-                              
-                                    </span>
-            
-                                    <ul className="dropdown-menu">
-                                      <li><NavLink className="dropdown-item fw-100" 
-                                      to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}>Dashboard</NavLink></li>
-                                      <li><NavLink className="dropdown-item" to="/act">Another action</NavLink></li>
-                                      <li><hr className="dropdown-divider"/></li>
-                                      <li><NavLink className="dropdown-item btn btn-outline-light me-3 rounded-0 d-flex align-items-center logOutsvg" to="/login" onClick={handleLogOut} >
-                                        <FiLogOut /><span className='px-2'>Logout</span></NavLink>
-                                      </li>
-                                    </ul>
-                                  </div>
-                               </>
-                             )
-                           }
-                      </div>
-                      <div className='eccomerce-card pe-3'>
-                        <Link to="/cart" className="text-white">
-                            <button type="button" className="btn btn-outline-light  position-relative">
-                              <FaShoppingBag />
-                              <span className="position-absolute  translate-middle badge rounded-pill bg-danger">
-                                {
-                                 cart?.length > 99 ?  (99+"+") : cart?.length 
-                                }
-                                <span className="visually-hidden">unread messages</span>
-                              </span>
-                            </button>
-                        </Link>
+                                      </span>
+              
+                                      <ul className="dropdown-menu">
+                                        <li><NavLink className="dropdown-item fw-100" 
+                                        to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}>Dashboard</NavLink></li>
+                                        <li><NavLink className="dropdown-item" to="/act">Another action</NavLink></li>
+                                        <li><hr className="dropdown-divider"/></li>
+                                        <li><NavLink className="dropdown-item btn btn-outline-light me-3 rounded-0 d-flex align-items-center logOutsvg" to="/login" onClick={handleLogOut} >
+                                          <FiLogOut /><span className='px-2'>Logout</span></NavLink>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                </>
+                              )
+                            }
+                        </div>
+                        <div className='eccomerce-card pe-3'>
+                          <Link to="/cart" className="text-white">
+                              <button type="button" className="btn btn-outline-light  position-relative">
+                                <FaShoppingBag />
+                                <span className="position-absolute  translate-middle badge rounded-pill bg-danger">
+                                  {
+                                  cart?.length > 99 ?  (99+"+") : cart?.length 
+                                  }
+                                  <span className="visually-hidden">unread messages</span>
+                                </span>
+                              </button>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                 </div>
