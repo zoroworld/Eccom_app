@@ -46,7 +46,7 @@ const HomePage = () => {
       <section className='AboutSection p-4 mt-5'>
          <div className='AboutContain'>
             <div className='AboutHeading'>
-              <h1 className='fw-bold'><span className='bg-primary py-2 px-3 m-1 rounded-2'>Regarding</span>Our Products</h1>
+              <h1 className='fw-bold myworp'><span className='bg-primary py-2 px-3 m-1 rounded-2'>Regarding</span>Our Products</h1>
             </div>
          </div>
          <div className='Abtwork mt-5'>
@@ -79,7 +79,7 @@ const HomePage = () => {
          <div className='catcontain'>
             <div className='catContent'>
                 <div className='catHeading'>
-                  <h1 className='fw-bold text-center'><span className='bg-success py-2 px-3 m-1 rounded-2'>Category</span>Of Our Products</h1>
+                  <h1 className='fw-bold text-center myworp'><span className='bg-success py-2 px-3 m-1 rounded-2'>Category</span>Of Our Products</h1>
                 </div>
                 <div className='catpara mt-4'>
                   <p className='text-center fs-5 fw-light'>Category wise divide of product which make you choose better.</p>
@@ -115,7 +115,7 @@ const HomePage = () => {
         <div className='prdContain'>
             <div className='prdContent'>
                 <div className='prdHeading'>
-                  <h1 className='fw-bold text-end'><span className='bg-warning py-2 px-3 m-1 rounded-2'>Choose</span>Your Products</h1>
+                  <h1 className='fw-bold text-end myworp'><span className='bg-warning py-2 px-3 m-1 rounded-2'>Choose</span>Your Products</h1>
                 </div>
                 <div className='prdpara mt-4'>
                   <p className='text-end fs-5 fw-light'>Category wise divide of product which make you choose better.</p>

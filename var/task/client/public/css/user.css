@@ -223,6 +223,9 @@
     .myfootercontainer {
         padding: 0 35px;
     }
+    .formControllerContain{
+        margin-top: 10px;
+    }
 }
 @media only screen and (max-width: 662px) {
     .mynavbarcont .formDiv{
@@ -247,6 +250,11 @@
     .copyrightcontain{
         flex-direction: column-reverse !important;
         gap: 11px;
+    }
+    .myworp {
+        display: flex;
+        display: flex;
+        flex-direction: column;
     }
 }
 
