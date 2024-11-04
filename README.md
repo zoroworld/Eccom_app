@@ -101,3 +101,36 @@ Note:- which api got hit
 # Create protect route for Admin also
 ## set role to get admin access
 # React work start but we use Next(React frame work)
+
+{
+  "name": "eccomerce_website",
+  "version": "1.0.0",
+  "description": "eccomerce rest api",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ./var/task/client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Techinfo",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "braintree": "^3.16.0",
+    "colors": "^1.4.0",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "slugify": "^1.6.6"
+  }
+}
+
