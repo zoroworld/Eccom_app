@@ -8,12 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/api(.*)",
+      "src": "/api/(.*)",
       "dest": "/server.js"
     },
-     {
+    {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "/var/task/client/build/index.html"
     }
   ]
 }
