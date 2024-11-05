@@ -44,8 +44,8 @@ app.use('*', function(req, res){
   res.sendFile(path.join(__dirname,'./var/task/client/build/index.html'));
 });
 
-app.use('/', function(req, res){
-  res.sendFile('Product Api running...');
+app.get('/', function(req, res){
+  res.send('Product Api running...');
 });
 
 
