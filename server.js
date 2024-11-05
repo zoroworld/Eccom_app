@@ -46,9 +46,9 @@ app.get('/', function(req, res){
 });
 
 
-app.use('*', function(req, res){
-  res.sendFile(path.join(__dirname,'./var/task/client/build/index.html'));
-});
+// app.use('*', function(req, res){
+//   res.sendFile(path.join(__dirname,'./var/task/client/build/index.html'));
+// });
 
 
 
