@@ -10,10 +10,6 @@
     {
       "src": "/api/(.*)",
       "dest": "/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/var/task/client/build/index.html"
     }
   ]
 }
