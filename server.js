@@ -40,13 +40,16 @@ app.use('/api/v1/product', productRoute );
 //     res.send('<h1>Welcome to Home Page..</h1>')
 // });
 // 2.
-app.use('*', function(req, res){
-  res.sendFile(path.join(__dirname,'./var/task/client/build/index.html'));
-});
 
 app.get('/', function(req, res){
   res.send('Product Api running...');
 });
+
+
+app.use('*', function(req, res){
+  res.sendFile(path.join(__dirname,'./var/task/client/build/index.html'));
+});
+
 
 
 
