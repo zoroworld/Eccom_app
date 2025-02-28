@@ -33,7 +33,7 @@
 
 
 # for Admin  
-- user: admin@gmail,com
+- user: admin@gmail.com
 - password: 1234
 
 # for User
