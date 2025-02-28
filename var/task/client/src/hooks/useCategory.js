@@ -8,7 +8,7 @@ export default function useCategory() {
     // get categories
     const getCategories = async () => {
         try {
-            const {data} = await axios.get(`${process.env.REACT_APP_API}api/v1/category/get-category`);
+            const {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/category/get-category`);
             setCategories(data?.category) //from the response in controller get category
         } catch (error) {
             console.log(error);

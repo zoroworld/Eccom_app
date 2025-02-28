@@ -41,7 +41,7 @@ export const updateCategoryController = async (req, res) => {
   
       const updatedCategory = await categoryModel.findByIdAndUpdate(
         id,
-        { name: name, slug: slugify(name) }, // Exclude "_id" from the update query
+        { name: name, slug: slugify(name) },
         { new: true }
       );
   

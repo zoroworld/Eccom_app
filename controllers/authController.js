@@ -7,23 +7,7 @@ import orderModel from "../models/orderModel.js";
     try {
         const  {name, email, password, phone, address, answer } = req.body;
 
-        // //validations when server making
-
-        // if(!name){
-        //     return res.send({error:"Name is Required"})
-        // } else if(!email) {
-        //     return res.send({error:"Email is Required"})
-        // } else if(!password) {
-        //     return res.send({error:"Password is Required"})
-        // } else if(!phone) {
-        //     return res.send({error:"Phone is Required"})
-        // } else if(!address) {
-        //     return res.send({error:"Address is Required"})
-        // }
-        
-        //validations when client making
-
-          if(!name){
+        if(!name){
             return res.send({message:"Name is Required"})
         } else if(!email) {
             return res.send({message:"Email is Required"})
@@ -38,7 +22,7 @@ import orderModel from "../models/orderModel.js";
         }
 
  
-        // checck user
+        // check user
         const existingUser = await userModel.findOne({ email });
         // existing user
         if(existingUser){
