@@ -33,12 +33,11 @@
 
 
 # for Admin  
-user: admin@gmail,com
-password: 1234
+- user: admin@gmail,com
+- password: 1234
 
 # for User
-user: user@gmail.com
-password: 123456789
+- user: user@gmail.com
+- password: 123456789
 
-And to see dashboard for user and admin
-select dashboard in user and admin profile
+- And to see dashboard for user and admin select dashboard in user and admin profile
