@@ -28,7 +28,7 @@ const CartPage = () => {
          setCart(myCart);
          localStorage.setItem('cart', JSON.stringify(myCart));
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
 
@@ -42,7 +42,7 @@ const CartPage = () => {
           currency: "USD",
          });
       } catch (error) {
-         console.log(error);
+         console.error(error);
       }
     }
 
@@ -52,7 +52,7 @@ const CartPage = () => {
         const  {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/product/braintree/token`);
         setClientToken(data?.clientToken)
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
 

@@ -21,7 +21,7 @@ const AdminProducts = () => {
                 navigate('/dashboard/admin/products');
             }, 100);
         } catch (error) {
-           console.log(error); 
+           console.error(error); 
            toast.error('Someting went wrong');
         }
     }
@@ -33,7 +33,7 @@ const AdminProducts = () => {
             setProducts(data.products);
             
         } catch (error) {
-            console.log(error);
+            console.error(error);
             toast.error('Somehins went wrong')
         }
     }

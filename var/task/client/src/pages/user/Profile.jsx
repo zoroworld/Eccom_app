@@ -48,7 +48,7 @@ const handleSubmitProfile = async (e) => {
                 toast.success('Profile Updated Successfully');
             }
         } catch(error){
-             console.log(error);
+             console.error(error);
              toast.error('Someting went wrong');
         }
    } else {

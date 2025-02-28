@@ -11,8 +11,7 @@ export default function AdminPrivate  () {
 
      useEffect(() => {
         const authCheck = async() => {
-            const res = await axios.get(`${process.env.REACT_APP_API}api/v1/auth/admin-auth`);
-            // console.log(res);
+            const res = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/auth/admin-auth`);
             try{
                 if(res.data.ok){
                   setOk(true)
@@ -20,7 +19,7 @@ export default function AdminPrivate  () {
                   setOk(false)
                 }
              } catch(error) {
-                  console.log(error);
+                  console.error(error);
               }
             } ;
         if(auth?.token) authCheck();

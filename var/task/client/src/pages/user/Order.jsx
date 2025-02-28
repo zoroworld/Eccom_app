@@ -13,7 +13,7 @@ const Order = () => {
       const {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/auth/orders`);
       setOrders(data);
        } catch (error) {
-         console.log(error);
+         console.error(error);
        }
     }
   useEffect(() => {

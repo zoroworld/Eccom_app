@@ -22,19 +22,18 @@ const HomePage = () => {
     try {
       setLoading(true)
       const response = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/product/product-list/${page}`);
-       console.log(response);
+       console.error(response);
       if(!response.statusText)
       {
           throw new Error("Data Not Fetch");
       }
       let data = response.data.products;
-      console.log(data);
       
       setLoading(false)
       setProducts(data);
     } catch (error) {
       setLoading(false)
-      console.log(error);
+      console.error(error);
     }
   }
   useEffect(() => {

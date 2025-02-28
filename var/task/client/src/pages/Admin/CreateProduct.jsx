@@ -28,7 +28,7 @@ const CreateProduct = () => {
           setCategories(data?.category);
         }
       } catch (error) {
-        console.log(error);
+        console.error(error);
         toast.error('Something went wrong get category');
       }
     };
@@ -59,7 +59,7 @@ const CreateProduct = () => {
            
           }
        } catch (error) {
-          console.log(error);
+          console.error(error);
           toast.error(`Something went wrong`)
        }
     }

@@ -22,7 +22,7 @@ const getProduct = async () => {
         setProduct(data.product);
         getSimilarProduct(data?.product._id, data?.product.category._id);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
 }
 
@@ -33,7 +33,7 @@ const getSimilarProduct = async(pid,cid) => {
      const {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/product/related-product/${pid}/${cid}`);
      setRealativeProduct(data?.products);
   } catch (error) {
-     console.log(error);
+     console.error(error);
   }
 }
 

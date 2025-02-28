@@ -39,7 +39,7 @@ const UpdateProduct = () => {
        setCategory(data.product.category._id);
        setCategories(data.product.categories);
     } catch (error) {
-       console.log(error);
+       console.error(error);
     }
   }
   // get all categories
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
           setCategories(data?.category);
         }
       } catch (error) {
-        console.log(error);
+        console.error(error);
         toast.error('Something went wrong get category');
       }
     };
@@ -81,7 +81,7 @@ const UpdateProduct = () => {
  
           }
        } catch (error) {
-          console.log(error);
+          console.error(error);
           toast.error(`Something went wrong`)
        }
     }

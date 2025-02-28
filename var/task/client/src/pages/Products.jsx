@@ -29,7 +29,7 @@ const Products = () => {
           setCategories(data?.category);
          }
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
 
@@ -41,7 +41,7 @@ const Products = () => {
   //     const {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/product/get-product`);
   //     setProducts(data.products);
   //   } catch (error) {
-  //     console.log(error);
+  //     console.error(error);
   //   }
   // }
  
@@ -55,7 +55,7 @@ const Products = () => {
       setProducts(data.products);
     } catch (error) {
       setLoading(false)
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -79,7 +79,7 @@ const Products = () => {
       const {data} = await axios.post(`${import.meta.env.VITE_APP_API }/api/v1/product/product-filters`, {checked, radio});
       setProducts(data?.products)
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -89,7 +89,7 @@ const Products = () => {
         const {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/product/product-count`);
         setTotal(data?.total)
       } catch (error) {
-         console.log(error);
+         console.error(error);
       }
     } 
   
@@ -102,7 +102,7 @@ const Products = () => {
          setLoading(false)
          setProducts([...products, ...data?.products])
        } catch (error) {
-         console.log(error);
+         console.error(error);
          setLoading(false)
        }
     }

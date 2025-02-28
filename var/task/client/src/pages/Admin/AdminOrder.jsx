@@ -18,7 +18,7 @@ const AdminOrder = () => {
         const {data} = await axios.get(`${import.meta.env.VITE_APP_API }/api/v1/auth/all-orders`);
         setOrders(data);
          } catch (error) {
-           console.log(error);
+           console.error(error);
          }
       }
 
@@ -30,7 +30,7 @@ const AdminOrder = () => {
             });
             getOrders()
            } catch (error) {
-             console.log(error);
+             console.error(error);
            }
       }
 
