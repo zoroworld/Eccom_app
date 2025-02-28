@@ -1,0 +1,275 @@
+.dashboard-sidebar  .isactive{
+    background-color: #0d6efd !important;
+}
+
+/* -----ant models-------- */
+:where(.css-dev-only-do-not-override-1jr9qlj).ant-modal .ant-modal-close{
+    top: -11px;
+    right: -11px;
+}
+:where(.css-dev-only-do-not-override-1jr9qlj).ant-modal .ant-modal-close-x{
+    font-size: 26px;
+}
+.name-modal-form{
+    width: 50%;
+}
+.modal-form-container .name-modal-form{
+   width: 100%;
+}
+
+/*---Product work---- */
+.prdr-contain :where(.css-dev-only-do-not-override-1jr9qlj).ant-select .ant-select-arrow {
+    color: rgb(255 255 255);
+}
+
+.myselectnewcontroller :where(.css-dev-only-do-not-override-1jr9qlj).ant-select .ant-select-arrow{
+    color: rgb(0 0 0);
+    font-size: 14px;
+}
+.form-change-bg::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.25);
+    
+}
+
+/* cards */
+.myrelif:last-child hr{
+    display: none;
+}
+
+/*--- orders ---*/
+.card-d-head-none{
+    display: none;
+}
+
+/* --Aorders--- */
+.SelectAdminOption .ant-select-selection-item{
+    font-size: 1.1rem;
+    color:#0d6efd;
+}
+
+/* ------Home page------ */
+.ratio-12x9 {
+    --bs-aspect-ratio: 47.25%;
+}
+
+.ratio-my video{
+
+    width: calc(100% + 0px);
+    height: calc(100vh - 84px);
+    object-fit: fill;
+}
+.catSetiodetails a:hover .card{ 
+    transition:  transform 0.6s linear;
+    transform: scale(1.06);
+    box-shadow: 0px 0px 10px 3px #14131399;
+}
+
+.cntContain{
+    max-width: 1627px;
+}
+.smartWatchContaioner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mynavbarcont .formDiv{
+    display: flex;
+}
+
+/* ------------footer----------------- */
+.myfootercontainer{
+    max-width: 1699px;
+    padding: 0 58px;
+}
+
+.footer-socialicon svg{
+    height: 35px;
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #fff;
+    border-radius: 50%;;
+}
+.social-media-contain{
+    gap:5px;
+}
+.footer-headline , .footer-socialheadline{
+    padding-bottom: 2px;
+    position: relative;
+ 
+}
+
+.footer-headline:after{
+    position: absolute;
+    content: '';
+    background-color: #323537;
+    width: 75%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+}
+
+.footer-socialheadline:after{
+    position: absolute;
+    content: '';
+    background-color: #323537;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+}
+
+.sidebar-container.col-md-2.transition-all {
+    position: relative;
+}
+
+.sidebar-container .offcanvas{
+    visibility: visible;
+}
+
+
+.dashboard-sidebar.col-md-2.transition-all {
+     position: relative;
+}
+
+.dashboard-sidebar .offcanvas{
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------Responsive work---------------------------- */
+@media only screen and (max-width: 1680px) {
+    .footer-summery{
+        padding-right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1403px) {
+    .mynavbarcont{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1403px) {
+    p, a, .fs-5, .btn{
+        font-size: 14px !important;
+    }
+}
+@media only screen and (max-width: 1140px) {
+    .mynavbarcont{
+        flex-direction: column;
+    }
+    .mytextlogrecart{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .mynavbarcont{
+        justify-content: space-between !important;
+        flex-direction: row;
+    }
+    .mynavbarcont .navbar-toggler {
+        background-color: #fc4e36 !important;
+        border: 0;
+        width: 41px;
+        height: 39px;
+        border-radius: 50%;
+        padding: 0;
+    }
+    .mynavbarcont  .navbar-toggler-icon {
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .mynavbarcont .formDiv{
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .mynavbarcont .formDiv form{
+        margin-right: 0 !important;
+        
+    }
+}
+@media only screen and (max-width: 768px) {
+    .myfootercontainer .row{
+         justify-content: center !important;
+         width: 100%;
+    }
+    .myfootercontainer .mylogotxt{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .myfootercontainer  .linktxt{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .myfootercontainer .lightUrlad li{
+        display: flex;
+        justify-content: center;
+        gap:6px;
+    }
+    .myfootercontainer  .linktxt h5{
+        text-align: center;
+    }
+    .myfootercontainer  .linktxt a{
+        text-align: center;
+    }
+    .myfootercontainer  .linktxt p{
+        text-align: center;
+    }
+    .footer-headline:after {
+        width: 100%;
+    }
+    .myfootercontainer {
+        padding: 0 35px;
+    }
+    .formControllerContain{
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 662px) {
+    .mynavbarcont .formDiv{
+        flex-direction: column;
+    }
+    .mynavbarcont .formDiv .logRegCart{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+ 
+}
+
+@media only screen and (max-width: 575px) {
+    .social-media-contain {
+        justify-content: center;
+    }
+    .copyrighttxled{
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .copyrightcontain{
+        flex-direction: column-reverse !important;
+        gap: 11px;
+    }
+    .myworp {
+        display: flex;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
