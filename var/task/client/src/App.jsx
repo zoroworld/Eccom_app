@@ -51,23 +51,28 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
         {/* User Dashboard Routes */}
+      {/* User Dashboard Routes */}
         <Route path="/dashboard/user" element={<PrivateRoute />}>
-          <Route index element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="orders" element={<Order />} />
+          <Route element={<Dashboard />}>
+            <Route index element={<UserOverview/>}/>
+            <Route path="profile"  element={<Profile />} /> 
+            <Route path="orders" element={<Order />} />
+          </Route>
         </Route>
+
 
         {/* Admin Dashboard Routes */}
         <Route path="/dashboard/admin" element={<AdminPrivate />}>
-          <Route index element={<AdminDashboard />} />
-          <Route path="overview" element={<AdminOverview />} />
-          <Route path="create-category" element={<CreateCategory />} />
-          <Route path="create-product" element={<CreateProduct />} />
-          <Route path="product/:slug" element={<UpdateProduct />} />
-          <Route path="admin-products" element={<AdminProducts />} />
-          <Route path="admin-details" element={<AdminDetails />} />
-          <Route path="users" element={<UsersList />} />
-          <Route path="orders" element={<AdminOrder />} />
+          <Route element={<AdminDashboard />}>
+            <Route index element={<AdminOverview />} />
+            <Route path="create-category" element={<CreateCategory />} />
+            <Route path="create-product" element={<CreateProduct />} />
+            <Route path="product/:slug" element={<UpdateProduct />} />
+            <Route path="admin-products" element={<AdminProducts />} />
+            <Route path="admin-details" element={<AdminDetails />} />
+            <Route path="users" element={<UsersList />} />
+            <Route path="orders" element={<AdminOrder />} />
+          </Route>
         </Route>
 
         {/* 404 Page */}

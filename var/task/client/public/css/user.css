@@ -118,7 +118,22 @@
     bottom: -5px;
 }
 
+.sidebar-container.col-md-2.transition-all {
+    position: relative;
+}
 
+.sidebar-container .offcanvas{
+    visibility: visible;
+}
+
+
+.dashboard-sidebar.col-md-2.transition-all {
+     position: relative;
+}
+
+.dashboard-sidebar .offcanvas{
+    visibility: visible;
+}
 
 
 

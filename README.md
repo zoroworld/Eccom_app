@@ -14,8 +14,6 @@
 - POST /api/v1/auth/logout – User logout
 - GET /api/v1/auth/profile – Get user profile
 - PUT /api/v1/auth/update-profile – Update user profile
-- POST /api/v1/auth/forgot-password – Request password reset
-- POST /api/v1/auth/reset-password – Reset user password
 
 ## Category Routes
 - POST /api/v1/category/create – Create a new category
@@ -32,3 +30,15 @@
 - DELETE /api/v1/product/:slug – Delete a product by ID
 - GET /api/v1/product/category/:categoryId – Get products by category
 - GET /api/v1/product/search?q=watchname – Search products by name
+
+
+# for Admin  
+user: admin@gmail,com
+password: 1234
+
+# for User
+user: user@gmail.com
+password: 123456789
+
+And to see dashboard for user and admin
+select dashboard in user and admin profile

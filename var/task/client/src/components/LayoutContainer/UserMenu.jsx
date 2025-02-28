@@ -27,7 +27,7 @@ const UserMenu = (props) => {
                     <div style={{position:'absolute', zIndex:0, left:-18}} className={`sidebar-ofcn sidebar-ofcn-name d-flex py-4 flex-column flex-shrink-0  bg-body-tertiary offcanvas offcanvas-start ${showOffcanvas ? 'show' : ''}`} tabIndex="-1" data-bs-backdrop="false">
                       <div className="offcanvas-header py-2">
                         <div className="offcanvas-title">
-                           <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                           <Link to="/dashboard/user" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                             <MdAdminPanelSettings  size={35} />
                             <span className="fs-4 px-2">User</span>
                           </Link >
@@ -48,7 +48,7 @@ const UserMenu = (props) => {
                               </NavLink >
                             </li>
                             <li>
-                            <NavLink style={styleworkDone} to="order" className={`nav-link link-body-emphasis nav-link d-flex align-items-center `}>
+                            <NavLink style={styleworkDone} to="orders" className={`nav-link link-body-emphasis nav-link d-flex align-items-center `}>
                                 <MdLibraryAdd size={20}/>
                                 <span className='px-2'>Order</span>
                             </NavLink >
@@ -61,7 +61,7 @@ const UserMenu = (props) => {
                     <div style={{position:'absolute', zIndex:0, left:-18}} className={` sidebar-ofcn  sidebar-ofcn-icons d-flex align-items-center py-4 flex-column flex-shrink-0  bg-body-tertiary  offcanvas offcanvas-start  ${showOffcanvas ? '' : 'show'}`} tabIndex="-1" data-bs-backdrop="false">
                       <div className="offcanvas-header p-2">
                         <div className="offcanvas-title">
-                          <Link  to="/" className=" mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                          <Link  to="/dashboard/user" className=" mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                             <MdAdminPanelSettings  size={40} />
                            </Link >
                         </div>
@@ -81,7 +81,7 @@ const UserMenu = (props) => {
                               </NavLink >
                             </li>
                             <li>
-                            <NavLink style={styleworkDone}  to="order" className="nav-link link-body-emphasis">
+                            <NavLink style={styleworkDone}  to="orders" className="nav-link link-body-emphasis">
                                 <MdLibraryAdd size={25}/>
                               
                             </NavLink >

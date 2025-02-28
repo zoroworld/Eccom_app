@@ -27,7 +27,7 @@ const AdminMenu = (props) => {
                     <div style={{position:'absolute', zIndex:0, left:-18}} className={`sidebar-ofcn sidebar-ofcn-name d-flex py-4 flex-column flex-shrink-0  bg-body-tertiary offcanvas offcanvas-start ${showOffcanvas ? 'show' : ''}`} tabIndex="-1" data-bs-backdrop="false">
                       <div className="offcanvas-header py-2">
                         <div className="offcanvas-title">
-                           <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                           <Link to="/dashboard/admin" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                             <MdAdminPanelSettings  size={35} />
                             <span className="fs-4 px-2">Admin</span>
                           </Link >
@@ -72,7 +72,7 @@ const AdminMenu = (props) => {
                              </NavLink >
                             </li>
                             <li>
-                            <NavLink style={styleworkDone} to="adminDetails" className="nav-link link-body-emphasis nav-link d-flex align-items-center">
+                            <NavLink style={styleworkDone} to="admin-details" className="nav-link link-body-emphasis nav-link d-flex align-items-center">
                                 <AiOutlineUnorderedList size={20}/>
                                 <span className='px-2'>Admin details</span>
                             </NavLink >
@@ -82,46 +82,60 @@ const AdminMenu = (props) => {
                     </div>
                      {/* ---For hole sidebar name end--- */}
                     {/* ---For hole sidebar icons start--- */}
-                    <div style={{position:'absolute', zIndex:0, left:-18}} className={` sidebar-ofcn  sidebar-ofcn-icons d-flex align-items-center py-4 flex-column flex-shrink-0  bg-body-tertiary  offcanvas offcanvas-start  ${showOffcanvas ? '' : 'show'}`} tabIndex="-1" data-bs-backdrop="false">
+                    <div
+                      style={{ position: 'absolute', zIndex: 0, left: -18 }}
+                      className={`sidebar-ofcn sidebar-ofcn-icons d-flex align-items-center py-4 flex-column flex-shrink-0 bg-body-tertiary offcanvas offcanvas-start ${showOffcanvas ? '' : 'show'}`}
+                      tabIndex="-1"
+                      data-bs-backdrop="false"
+                    >
+                      {/* Offcanvas Header */}
                       <div className="offcanvas-header p-2">
                         <div className="offcanvas-title">
-                          <Link  to="/dashboard/admin" className=" mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                            <MdAdminPanelSettings  size={40} />
-                           </Link >
+                          <Link to="/dashboard/admin" className="mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                            <MdAdminPanelSettings size={40} />
+                          </Link>
                         </div>
                       </div>
+
+                      {/* Offcanvas Body */}
                       <div className={`offcanvas-body p-2 ${showOffcanvas ? '' : 'show'}`}>
-                      <ul className="nav nav-pills flex-column mb-auto">
-                            <li className="nav-item">
-                              <NavLink end style={styleworkDone} to="/" className="nav-link link-body-emphasis" aria-current="page">
-                                <RiDashboardFill size={25}  />
-                               
-                              </NavLink >
-                            </li>
-                            <li>
-                              <NavLink style={styleworkDone}  to="create-category" className="nav-link link-body-emphasis ">
-                                <AiOutlineForm size={25}/>
-                              </NavLink >
-                            </li>
-                            <li>
-                            <NavLink style={styleworkDone}  to="create-product" className="nav-link link-body-emphasis ">
-                                <MdLibraryAdd size={25}/>
-                            </NavLink >
-                            <NavLink style={styleworkDone}  to="admin-products" className="nav-link link-body-emphasis ">
-                                <CiViewList size={25}/>
-                            </NavLink >
-                            </li>
-                            <li>
-                            <NavLink style={styleworkDone}  to="users" className="nav-link link-body-emphasis ">
-                                <FiUsers size={25}/>                      
-                             </NavLink >
-                            </li>
-                            <li>
-                            <NavLink  style={styleworkDone}  to="adminDetails" className="nav-link link-body-emphasis  ">
-                                <AiOutlineUnorderedList size={20}/>
-                             </NavLink >
-                            </li>
-                          </ul>
+                        <ul className="nav nav-pills flex-column mb-auto">
+                          <li className="nav-item">
+                            <NavLink end style={styleworkDone} to="/dashboard/admin" className="nav-link link-body-emphasis" aria-current="page">
+                              <RiDashboardFill size={25} />
+                            </NavLink>
+                          </li>
+
+                          <li className="nav-item">
+                            <NavLink style={styleworkDone} to="create-category" className="nav-link link-body-emphasis">
+                              <AiOutlineForm size={25} />
+                            </NavLink>
+                          </li>
+
+                          <li className="nav-item">
+                            <NavLink style={styleworkDone} to="create-product" className="nav-link link-body-emphasis">
+                              <MdLibraryAdd size={25} />
+                            </NavLink>
+                          </li>
+
+                          <li className="nav-item">
+                            <NavLink style={styleworkDone} to="admin-products" className="nav-link link-body-emphasis">
+                              <CiViewList size={25} />
+                            </NavLink>
+                          </li>
+
+                          <li className="nav-item">
+                            <NavLink style={styleworkDone} to="users" className="nav-link link-body-emphasis">
+                              <FiUsers size={25} />
+                            </NavLink>
+                          </li>
+
+                          <li className="nav-item">
+                            <NavLink style={styleworkDone} to="admin-details" className="nav-link link-body-emphasis">
+                              <AiOutlineUnorderedList size={20} />
+                            </NavLink>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                      {/* ---For hole sidebar icons end--- */}
