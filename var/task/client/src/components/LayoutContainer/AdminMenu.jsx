@@ -24,7 +24,7 @@ const AdminMenu = (props) => {
                       <RiBarChartHorizontalFill  /> 
                     </button>
                     {/* ---For hole sidebar name start --- */}
-                    <div style={{position:'absolute', zIndex:0, left:-18}} className={`sidebar-ofcn sidebar-ofcn-name d-flex py-4 flex-column flex-shrink-0  bg-body-tertiary offcanvas offcanvas-start ${showOffcanvas ? 'show' : ''}`} tabIndex="-1" data-bs-backdrop="false">
+                    <div style={{position:'absolute', zIndex:0, left:-18}} className={`sidebar-ofcn sidebar-ofcn-name d-flex py-4 flex-column flex-shrink-0  bg-body-tertiary offcanvas offcanvas-start ${showOffcanvas ? 'show' : 'hide'}`} tabIndex="-1" data-bs-backdrop="false">
                       <div className="offcanvas-header py-2">
                         <div className="offcanvas-title">
                            <Link to="/dashboard/admin" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">

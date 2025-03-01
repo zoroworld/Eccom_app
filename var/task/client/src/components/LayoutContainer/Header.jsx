@@ -43,10 +43,10 @@ const Header = () => {
                   <img className="shadow p-2" src="/logo512.png" alt="keep shopping and be happy" height={60} width={60}/>
                   <h4 className='mb-0 font-weight-bold logotag'>eccomerce App</h4>
                 </Link>
-                <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
+                <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent01" aria-controls="navbarSupportedContent01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon bi bi-list" />
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent01">
                     <ul className="nav col-12 col-lg-auto ms-auto mb-2  me-3  justify-content-center mb-md-0">
                         <li><NavLink to="/" className="nav-link px-2 text-white ">Home</NavLink></li>
                         {/* <li><NavLink  className="nav-link px-2 text-white">Category</NavLink></li> */}
@@ -124,7 +124,8 @@ const Header = () => {
                       </div>
                     </div>
                 </div>
-           </nav>
+            </nav>
+           
 
          </div>
         </div>
