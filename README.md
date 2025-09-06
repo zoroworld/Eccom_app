@@ -116,7 +116,7 @@ The application follows an **MVC-inspired modular structure** with controllers, 
     - **GET** `/api/orders/all` → Get all orders (Admin only)  
 
 
-## ⚛️ Frontend (Reactjs.js)(using vite)
+## ⚛️ Frontend (React)(using vite)
 
 Next.js is used as the frontend framework with full **API integration** from the backend.  
 
