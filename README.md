@@ -1,6 +1,6 @@
 # 🚀 Full-Stack E-Commerce Project
 
-This document explains the complete setup and project structure for building a **MERN + Next.js** application.  
+This document explains the complete setup and project structure for building a **MERN + React.js(using vite)** application.  
 It covers **High-Level Design (HLD)** and **Low-Level Design (LLD)** including environment setup, database connection, folder structure, middleware, authentication, and API design.
 
 ---
