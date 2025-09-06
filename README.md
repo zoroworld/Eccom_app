@@ -5,8 +5,6 @@ It covers **High-Level Design (HLD)** and **Low-Level Design (LLD)** including e
 
 ---
 
-# 🏗️ High-Level Design (HLD)
-
 ## 🎯 Overview
 The system is a **full-stack e-commerce application** built using:
 - **Frontend:** Next.js (React framework)
