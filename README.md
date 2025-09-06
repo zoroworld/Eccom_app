@@ -8,7 +8,7 @@
 
 # This is all api endpoints
 
-## Authentication Routes 
+## Authentication Route
 - POST /api/v1/auth/register – Register a new user
 - POST /api/v1/auth/login – User login
 - POST /api/v1/auth/logout – User logout
