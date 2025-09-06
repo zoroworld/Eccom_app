@@ -31,6 +31,7 @@ The application follows an **MVC-inspired modular structure** with controllers, 
 ---
 
 ## 🏛️ System Architecture
+
 ```mermaid
 flowchart TD
     Client[Next.js Frontend] -->|HTTP Requests| API[Express.js Server]
@@ -39,6 +40,7 @@ flowchart TD
     JWT --> API
     Admin[Admin Role] -->|Extra Access| API
 
+## Project Folder Structure
 
 project-root/
 │── config/              # Database connection
@@ -47,7 +49,7 @@ project-root/
 │── middlewares/         # Custom middlewares
 │── models/              # MongoDB schemas
 │── routes/              # API routes
-│── server.js            # Entry point
+│── server.js            # Main entry point
 │── .env                 # Environment variables
 │── package.json
 
