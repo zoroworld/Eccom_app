@@ -32,26 +32,26 @@ The application follows an **MVC-inspired modular structure** with controllers, 
 
 ## 🏛️ System Architecture
 
-```mermaid
-flowchart TD
-    Client[Next.js Frontend] -->|HTTP Requests| API[Express.js Server]
-    API -->|Auth| JWT[JWT Middleware]
-    API --> DB[(MongoDB Database)]
-    JWT --> API
-    Admin[Admin Role] -->|Extra Access| API
+
+    flowchart TD
+        Client[Next.js Frontend] -->|HTTP Requests| API[Express.js Server]
+        API -->|Auth| JWT[JWT Middleware]
+        API --> DB[(MongoDB Database)]
+        JWT --> API
+        Admin[Admin Role] -->|Extra Access| API
 
 ## Project Folder Structure
 
-project-root/
-│── config/              # Database connection
-│── controllers/         # Business logic
-│── helpers/             # Utility/helper functions
-│── middlewares/         # Custom middlewares
-│── models/              # MongoDB schemas
-│── routes/              # API routes
-│── server.js            # Main entry point
-│── .env                 # Environment variables
-│── package.json
+    project-root/
+    │── config/              # Database connection
+    │── controllers/         # Business logic
+    │── helpers/             # Utility/helper functions
+    │── middlewares/         # Custom middlewares
+    │── models/              # MongoDB schemas
+    │── routes/              # API routes
+    │── server.js            # Main entry point
+    │── .env                 # Environment variables
+    │── package.json
 
 
 ## 🔐 Environment Variables
