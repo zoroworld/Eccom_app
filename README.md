@@ -1,222 +1,147 @@
 # 🚀 Full-Stack E-Commerce Project Setup
 
 This document explains the complete setup and project structure for building a **MERN + Next.js** application.  
-It covers **environment setup, database connection, folder structure, middleware, authentication, and API design**.
+It covers **High-Level Design (HLD)** and **Low-Level Design (LLD)** including environment setup, database connection, folder structure, middleware, authentication, and API design.
 
 ---
 
-## 📦 Project Initialization
+# 🏗️ High-Level Design (HLD)
 
-1. Initialize project with **npm**:
-   ```bash
-   npm init -y
+## 🎯 Overview
+The system is a **full-stack e-commerce application** built using:
+- **Frontend:** Next.js (React framework)
+- **Backend:** Node.js with Express.js
+- **Database:** MongoDB (Local, Compass, or Atlas Cloud)
+- **Authentication:** JWT-based authentication and authorization
+- **Middleware:** dotenv, morgan, jsonwebtoken
 
-Add configuration in package.json:
+The application follows an **MVC-inspired modular structure** with controllers, routes, and models.
 
-To use ES6+ imports, include:
+---
 
-"type": "module"
+## 🔐 Core Features
+- User authentication (Register, Login, Profile, Admin access)
+- Product management (CRUD operations)
+- Order management
+- Role-based access control (User vs Admin)
+- Environment variable protection
+- API logging with Morgan
+- Cloud/Local database support
 
+---
 
-Install dependencies:
-
-npm install express colors
-npm install --save-dev nodemon
-
-
-Developer convenience:
-
-Use nodemon to auto-restart server.
-
-Store sensitive information in .env file.
-
-🔐 Environment Variables
-
-Install dotenv:
-
-npm install dotenv
-
-
-In development, load env config:
-
-dotenv.config();
+## 🏛️ System Architecture
+```mermaid
+flowchart TD
+    Client[Next.js Frontend] -->|HTTP Requests| API[Express.js Server]
+    API -->|Auth| JWT[JWT Middleware]
+    API --> DB[(MongoDB Database)]
+    JWT --> API
+    Admin[Admin Role] -->|Extra Access| API
 
 
-Example .env file:
+project-root/
+│── config/              # Database connection
+│── controllers/         # Business logic
+│── helpers/             # Utility/helper functions
+│── middlewares/         # Custom middlewares
+│── models/              # MongoDB schemas
+│── routes/              # API routes
+│── server.js            # Entry point
+│── .env                 # Environment variables
+│── package.json
 
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
 PORT=5000
 MONGO_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/eccomerce
 JWT_SECRET=your_secret_key
 
-📑 Middlewares
+import dotenv from "dotenv";
+dotenv.config();
 
-morgan – to log requests:
+## 📑 Middlewares
 
-npm install morgan
+- **dotenv** → Load environment variables from `.env`
+- **morgan** → Log API requests for monitoring and debugging
+- **jsonwebtoken** → Handle authentication using JWT tokens
+- **Custom middleware** → Protect routes and verify user roles (User/Admin)
 
 
-dotenv – for environment variables.
 
-jsonwebtoken – for secure authentication.
+## Authentication & Authorization
 
-🗄️ MongoDB Setup
-Local Installation
+### Token Generation:
+- On login/register → issue JWT token.
 
-Update system: sudo apt-get update
+### Protect Routes:
+- Middleware validates JWT before granting access.
 
-Download Mongo Shell (mongosh) .deb package.
+### Admin Access:
+- Role field in user schema decides admin privileges.
 
-Install with sudo dpkg -i <package>.deb.
 
-Configure mongod service and DB path (/var/lib/mongodb/).
+## 🧪 API Design
 
-Start service:
+### 🔑 Auth Routes
+- **POST** `/api/auth/register` → Register user  
+- **POST** `/api/auth/login` → Login & issue token  
+- **GET** `/api/auth/profile` → Get user profile (Protected)  
+- **GET** `/api/auth/admin` → Admin-only route  
 
-service mongodb start
+---
 
+### 👤 User Routes
+- **GET** `/api/users` → Get all users (Admin only)  
+- **PUT** `/api/users/:id` → Update user details  
+- **DELETE** `/api/users/:id` → Delete user  
 
-Stop service:
+---
 
-service mongodb stop
+### 📦 Product Routes
+- **POST** `/api/products` → Create product (Admin only)  
+- **GET** `/api/products` → Get all products  
+- **GET** `/api/products/:id` → Get product by ID  
+- **PUT** `/api/products/:id` → Update product (Admin only)  
+- **DELETE** `/api/products/:id` → Delete product (Admin only)  
 
-MongoDB Compass
+---
 
-Download Compass .deb package.
+### 🛒 Order Routes
+- **POST** `/api/orders` → Create order  
+- **GET** `/api/orders` → Get user’s orders  
+- **GET** `/api/orders/all` → Get all orders (Admin only)  
 
-Install with sudo dpkg -i <package>.deb.
 
-Connect with local/Atlas Mongo instance.
+## ⚛️ Frontend (Next.js)
 
-MongoDB Atlas (Cloud)
+Next.js is used as the frontend framework with full **API integration** from the backend.  
 
-Create free shared cluster on Atlas.
+### 📄 Pages
+- **Home** → Landing page with product listings  
+- **Login / Register** → User authentication pages  
+- **Products & Product Details** → Browse products and view details  
+- **Cart & Checkout** → Add items to cart and place orders  
+- **Orders** → View user’s past and active orders  
+- **Admin Dashboard** → Manage products, users, and orders (Admin only)  
 
-Create a database:
+---
 
-Name: eccomerce
+## ✅ Testing
 
-Collection: users
+Use **Postman** (or similar API client) for testing backend APIs.  
 
-Configure Database Access → Create user (username + password).
+### Authorization
+- Add JWT token in the request header:  
 
-Configure Network Access → Whitelist 0.0.0.0/0.
+## 🏁 Conclusion
 
-Get connection string:
+- ✅ **Backend** secured with **JWT authentication** & **role-based middleware**  
+- 🗄️ **Database** can be local **MongoDB**, **Compass**, or **Atlas Cloud**  
+- ⚛️ **Frontend** built with **Next.js** consuming backend APIs  
+- 🚀 Designed to **scale** as a production-ready **e-commerce system**  
 
-mongodb+srv://<username>:<password>@cluster0.mongodb.net/eccomerce
-
-
-Save it in .env as MONGO_URL.
-
-📂 Folder Structure
-project-root/
-│── config/
-│    └── db.js          # Database connection
-│
-│── controllers/        # Business logic (e.g., authController.js)
-│── helpers/            # Utility functions (e.g., authHelper.js)
-│── middlewares/        # Middleware (e.g., authMiddleware.js)
-│── models/             # MongoDB schemas (e.g., userModel.js)
-│── routes/             # Express routes (e.g., authRoutes.js)
-│── server.js           # Main entry point
-│── .env                # Environment variables
-│── package.json
-
-🔑 Authentication & Authorization
-Token Generation
-
-Use jsonwebtoken to issue tokens upon user login/registration.
-
-Token is stored on client side.
-
-Token is required for protected routes.
-
-Protecting Routes
-
-Middleware verifies JWT before allowing access.
-
-If valid → allow user.
-
-If invalid/expired → deny access.
-
-Admin Access
-
-Users have roles (user, admin).
-
-Middleware checks for role before granting admin privileges.
-
-🧪 API Design (No Code)
-Auth Routes
-
-POST /api/auth/register → Register user.
-
-POST /api/auth/login → Login & get token.
-
-GET /api/auth/profile → Get logged-in user profile (Protected).
-
-GET /api/auth/admin → Admin-only route (Protected).
-
-User Routes
-
-GET /api/users → Get all users (Admin only).
-
-PUT /api/users/:id → Update user details.
-
-DELETE /api/users/:id → Delete user.
-
-Product Routes
-
-POST /api/products → Add new product (Admin only).
-
-GET /api/products → Get all products.
-
-GET /api/products/:id → Get product by ID.
-
-PUT /api/products/:id → Update product (Admin only).
-
-DELETE /api/products/:id → Delete product (Admin only).
-
-Order Routes
-
-POST /api/orders → Create new order.
-
-GET /api/orders → Get user’s orders.
-
-GET /api/orders/all → Get all orders (Admin only).
-
-⚛️ Frontend (Next.js)
-
-Next.js is used for frontend instead of React.
-
-Securely connects to backend APIs.
-
-Authentication handled via JWT tokens.
-
-Pages:
-
-Home, Login, Register
-
-Products, Product Details
-
-Cart, Checkout, Orders
-
-Admin Dashboard
-
-✅ Testing
-
-Use Postman to test APIs.
-
-Example Authorization Header:
-
-key: Authorization
-value: Bearer <token>
-
-🏁 Conclusion
-
-Backend secured with JWT & middleware.
-
-MongoDB used for data persistence (local or Atlas).
-
-Next.js frontend consumes API routes.
-
-Scalable structure for real-world e-commerce applications.
